@@ -1,0 +1,538 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap');
+
+:root {
+    --black: #171717;
+    --icewhite: aliceblue; 
+    --blue: #0099cc;
+    --red: rgba(179, 1, 1, 0.75);
+    --white: white;
+}
+
+html {
+    font-family: 'Sofia', sans-serif;
+}
+
+body {
+    background-color: var(--white);
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+    width: 100%;
+    background-color: var(--icewhite);
+    padding: 1.2rem;
+    font-size: 0.75rem;
+    color: var(--black)
+}
+
+#menu-button {
+    display: none;
+}
+
+.logo {
+    font-size: 2.5rem;
+}
+
+nav li {
+    display: inline-block;
+    padding: 1rem;
+}
+
+nav a {
+    color: var(--black)
+}
+
+#main {
+    position: relative;
+    display: flex;
+    height: calc(100vh - 4rem);
+    width: 100%;
+    color: var(--icewhite);
+}
+
+#hairguy {
+    height: 110vh;
+    width: 40rem;
+    position: absolute;
+    right: 0;
+    top: -2.5rem;
+    z-index: -1;
+    background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 80%, var(--black) 89%), 
+                      linear-gradient(to bottom, rgba(0,0,0,0) 60%, var(--black) 80%),
+                      url('../images/trimSM.jpg');
+    background-repeat: no-repeat;
+    transform: skewy(5deg);
+
+}
+
+#main::before {
+    content: '';
+    position: absolute;
+    inset: -3.5rem 0 auto 0;
+    z-index: -1;
+    height: 110vh;
+    transform: skewY(5deg);
+    background-color: var(--black);
+}
+
+
+#control {
+    margin-top: 8rem;
+    margin-left: 13rem;
+    width: 30rem;
+    height: 23rem;
+}
+
+#control h1 {
+    font-family: 'Reenie Beanie', cursive;
+    font-size: 7rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px var(--blue);
+}
+
+#control p {
+    width: 20rem;
+    margin: 2rem 0;
+}
+
+.hairbtn {
+    background: var(--icewhite);
+    margin-right: 1rem;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+.hairbtn a {
+    color:  var(--black)
+}
+
+.hairbtn:hover {
+    background-color: cadetblue;
+    padding: 0.7rem;
+    margin-right: 0.6rem;
+}
+
+#hours {
+    position: absolute;
+    display: inline;
+    transform: rotate(90deg);
+    right: -4.25rem;
+    top: 50%;
+    font-size: 1rem;
+    
+}
+
+#discount-book {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    inset: auto auto -7rem 1.75rem;
+    height: 12rem;
+    width: 11rem;
+    border-radius: 120px / 115px 10px;
+    padding: 1rem;
+    background-color: var(--blue);
+    color: var(--icewhite);
+	text-shadow: 2px 2px var(--black);
+}
+
+#discount-book:hover {
+    cursor: pointer;
+}
+
+#discount-book span {
+    font-size: 1rem;
+}
+
+i.dis-close {
+    display: none;
+    text-align: left;
+}
+
+
+#services {
+    margin-top: 12rem;
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+}
+
+.styleCard {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around ;
+    height: 25rem;
+    width: 20rem;
+    background-color: var(--white);
+    border: 2px solid var(--black);
+    padding: 1.2rem;
+    margin-top: 2.2rem;
+    font-size: 0.9rem;
+
+}
+
+.styleCard::before {
+    content: ' ';
+    position: absolute;
+    inset: auto -1rem -1rem auto;
+    width: 98%;
+    height: 98%;
+    filter: blur(0.5rem);
+    background-color: var(--icewhite );
+    z-index: -1;
+
+}
+
+.styleCard h3 {
+    font-size: 1.5rem;
+    position: absolute;
+    inset: -0.8rem auto auto -0.4rem;
+    padding: 0 0.2rem;
+    background-color: var(--white);
+}
+
+.styleCard p {
+    width: -moz-fit-content;
+    width: fit-content;
+    backdrop-filter: blur(25px) saturate(40%);
+    filter: drop-shadow(0 0 0.75rem #0099cc);
+    padding: 5px;
+    margin-bottom: 1em;
+}
+
+#left{
+    background-image: url(../images/scissors.jpg);
+    background-size: cover;
+
+ }
+#middle{
+    background-image: url(../images/emptyShop.jpg);
+    background-size:  cover;
+
+}
+
+#right{
+    background-image: url(../images/comeToYou.jpg);
+    background-size: cover;
+
+}
+
+.styleCard img {
+    height: 17rem;
+    width: auto;
+}
+
+#empower {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30rem;
+    width: 100%;
+    margin-top: 7rem;
+    background-color: var(--icewhite);
+}
+
+#text-video {
+    width: 30rem;
+    line-height: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding: 1.5rem;
+}
+
+#text-video h2{
+    font-size: 2rem;
+    line-height: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+#video {
+    display: grid;
+    place-items: center;
+    aspect-ratio: 16/9;
+    height: 15rem;
+    background-color: rgb(161, 161, 167);
+    font-size: 4rem;
+}
+
+#professionals {
+    width: 100%;
+    height: 30rem;
+    margin: 5rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+	text-shadow: 2px 2px var(--black);
+}
+
+.professionalCard {
+    position: relative;
+    height: 21rem;
+    margin: 1rem;
+}
+
+.professionalCard figcaption {
+	position: absolute;
+	inset: auto auto 0 -0.5rem;
+	padding: 1rem;
+	background-color: var(--blue);
+	color: var(--icewhite);
+	font-size: 1.5rem;
+}
+
+.proPictures {
+    height: 20rem;
+    width: 15rem;
+}
+
+#coupon {
+    margin: 10rem auto;
+    width: 67%;
+    height: 10rem;
+    background-color: var(--blue);
+    text-align: center;
+    color: var(--icewhite);
+    font-size: 2rem;
+    padding: 2rem;
+    border-radius: 8rem 90rem / 120rem;
+	text-shadow: 2px 2px var(--black);
+}
+
+#inspiration {
+    background-color: var(--icewhite);
+    display: grid;
+    width: 100%;
+    justify-content: center;
+}
+
+.griddy {
+    margin: 7rem auto;
+    display: grid;
+    width: 35rem;
+    height: 35rem;
+    grid-template-columns: 31% 31% 31%;
+    grid-template-rows: 31% 31% 31%;
+    grid-template-areas: "one two three"
+        "four two five"
+        "four six five";
+    grid-gap: 0.8rem;
+    place-content: center;
+}
+
+#imgOne {
+    background-color: grey;
+    background-image: url('../images/shave.jpg');
+    background-size: 16rem auto;
+    background-position: -4rem 0;
+    grid-area: one;
+}
+
+#imgTwo {
+    background-color: blue;
+    background-image: url('../images/fade.jpg');
+    background-size: 15rem auto;
+    background-position: -2rem 0;
+    grid-area: two;
+}
+
+#imgThree {
+    background-color: red;
+    background-image: url('../images/beard.jpeg');
+    background-size: 18rem auto;
+    background-position: -5rem -1rem;
+    grid-area: three;
+}
+
+#imgFour {
+    background-color: green;
+    background-image: url('../images/sideRazor.jpg');
+    background-size: 15rem auto;
+    background-position:  -1.5rem 0;
+    grid-area: four;
+}
+
+#imgFive {
+    background-color: purple;
+    background-image: url('../images/barberChair.jpg');
+    background-size: 15rem auto;
+    background-position: -2rem 0;
+    grid-area: five;
+}
+
+#imgSix {
+    background-color: cyan;
+    background-image: url('../images/towel.jpg');
+    background-repeat: no-repeat;
+    background-size: auto 24rem;
+    background-position: -5rem -4.5rem;
+    grid-area: six;
+}
+
+
+
+.griddy * {
+    border: 1px solid black;
+}
+
+/* animations */
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    };
+}
+
+
+@media screen and (max-width: 1000px) {
+    main {
+        background-image: url('../images/logo.png');
+        background-repeat: no-repeat;
+        background-position: right;
+    }
+
+    #control {
+        margin-top: 30%;
+        margin-left: 10%;
+    }
+
+    #hairguy {
+        display: none;
+    }
+
+    #disount-book {
+        position: relative;
+        margin-left: 4rem;
+    }
+
+    #services {
+        flex-direction: column;
+        height: 50rem;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    .styleCard {
+        flex-direction: row;
+        height: 15rem;
+        width: clamp(30rem, 40rem, 45rem);
+    }
+}
+
+@media screen and (max-width: 750px) {
+
+    .styleCard {
+        width: 90%;
+        height: auto;
+    }
+
+    #discount-book {
+        top: 4rem;
+        left: 1rem;
+        text-align: center;
+    }
+
+    #discount-book .dis-close {
+        display: inline-block;
+        text-align: left;
+    }
+
+    #empower {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #text-video {
+        width: 100%;
+    }
+
+    #video {
+        width: 95%;
+    }
+
+    #text-video p {
+        font-size: 1.2rem;
+    }
+
+    #professionals {
+        flex-direction: column;
+        height: auto;
+    }
+
+    #coupon {
+        display: none;
+    }
+
+    #inspiration {
+        width: 100%;
+        text-align: center;
+    }
+
+    .griddy {
+        max-width: 35rem;
+        max-height: 35rem;
+    }
+
+}
+
+@media screen and (max-width: 630px) {
+    
+    #control {
+        margin-top: 30%;
+        margin-left: 10%;
+    }
+    #control h1 {
+        text-shadow: 2px 2px var(--blue);
+    }
+    #control p {
+        padding: 5px;
+        backdrop-filter: blur(25px) saturate(40%);
+        filter: drop-shadow(0 0 0.75rem #0099cc);
+    }
+
+    .logo {
+        position: absolute;
+        left: calc(50vw - 1.25rem)
+    }
+
+    #menu-button {
+        display: inline-block;
+        font-size: 2rem;
+    }
+    
+    nav {
+        display: none;
+        position: absolute;
+        top: 4rem;
+        left: 0;
+        height: auto;
+        width: 50%;
+        background-color: var(--icewhite);
+        z-index: 3;
+    }
+
+    nav ul{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 35rem) {
+    .griddy {
+        height: 95vw;
+        width: 95vw;
+    }
+}
